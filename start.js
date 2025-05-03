@@ -7,7 +7,6 @@ module.exports = async (kernel) => {
         "path": "app",
         "conda": "env",
         "env": {
-          "CUDA_HOME": "{{path.resolve(cwd, 'app', 'env')}}",
           "DISTUTILS_USE_SDK": "1"
         },
         "message": [
