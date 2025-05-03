@@ -20,6 +20,7 @@ module.exports = {
       conda: "env",
       path: "app",
       message: [
+        "python -m pip install pip==23.3.0",
         "uv pip install opencv-python numpy==1.26.4",
         "uv pip install -r requirements.txt"
       ]
