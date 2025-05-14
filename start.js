@@ -4,15 +4,10 @@ module.exports = async (kernel) => {
     run: [{
       method: "shell.run",
       params: {
-        build: true,
         path: "app",
-        conda: "env",
-        env: {
-          "DISTUTILS_USE_SDK": "1"
-        },
+        venv: "env",
+        env: { },
         message: [
-          "{{platform === 'win32' ? 'set' : 'env'}}",
-          "nvcc --version",
           "python app.py",
         ],
         on: [{
