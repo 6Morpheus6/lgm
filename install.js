@@ -2,22 +2,23 @@ module.exports = {
   run: [{
     method: "shell.run",
     params: {
-      message: "git clone https://huggingface.co/spaces/cocktailpeanut/LGM app"
+      message: "git clone https://huggingface.co/spaces/6Morpheus6/LGM app"
     }
   }, {
     method: "script.start",
     params: {
       uri: "torch.js",
       params: {
-        conda: "env",
+        venv: "env",
         path: "app",
         xformers: true,
+        triton: true
       }
     }
   }, {
     method: "shell.run",
     params: {
-      conda: "env",
+      venv: "env",
       path: "app",
       message: [
         "python -m pip install pip==23.3.0",
